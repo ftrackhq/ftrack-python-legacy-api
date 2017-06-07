@@ -7,4 +7,10 @@
 Release Notes
 *************
 
-.. release:: Upcoming
+.. release:: 3.2.6
+    .. changed::
+        :tags: API
+
+        The api is now available through this standalone package as opposed
+        to packaged together with the ftrack server.
+
