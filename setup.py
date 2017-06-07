@@ -47,7 +47,7 @@ setup(
         'clique >= 1.2.0, < 2',
         'requests >= 2.2.0, < 3',
         'websocket-client >= 0.40.0, < 1',
-        'six >= 1.5.2"'
+        'six >= 1.5.2'
     ],
     tests_require=[
         'nose >= 1.3'
