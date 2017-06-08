@@ -8,8 +8,10 @@ Release Notes
 *************
 
 .. release:: 3.2.6
-    .. changed::
-        :tags: API
+
+    .. change:: new
+        :tags: Legacy API
+
 
         The api is now available through this standalone package as opposed
         to packaged together with the ftrack server.

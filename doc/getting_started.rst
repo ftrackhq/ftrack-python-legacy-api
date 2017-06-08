@@ -18,14 +18,12 @@ Quick start API code example
 Before being able to communicate with a ftrack server from a Python script, the
 Python API has to be set up. Follow the 5 simple steps below to get started:
 
-#. Download the Python API from 
-   :menuselection:`System Settings --> General Settings --> About`, or by 
-   navigating to the following URL:
+#. Install the Python API using pipDownload the Python API from
 
-   ``<YOUR_FTRACK_SERVER_URL>/python-api.tar``
+   .. code-block:: bash
 
-   Replace ``<YOUR_FTRACK_SERVER_URL>`` with the address to your ftrack 
-   server, e.g. my-company.ftrackapp.com.
+      pip install ftrack-python-legacy-api
+
 
 #. Extract the file and put the contents in a directory on your computer.
 

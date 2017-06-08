@@ -11,16 +11,15 @@ The ftrack legacy python api.
     :maxdepth: 1
 
     installing
-
-    api_reference/index
     release/index
-    glossary
     getting_started
     api_tutorial/index
     locations/index
     events/index
     dynamic_enumerator
     reviewing/index
+    api_reference/index
+
 
 
 ******************
