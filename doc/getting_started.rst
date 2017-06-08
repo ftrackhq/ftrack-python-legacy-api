@@ -18,14 +18,12 @@ Quick start API code example
 Before being able to communicate with a ftrack server from a Python script, the
 Python API has to be set up. Follow the 5 simple steps below to get started:
 
-#. Install the Python API using pipDownload the Python API from
+#. Install the Python API using pip
 
    .. code-block:: bash
 
       pip install ftrack-python-legacy-api
 
-
-#. Extract the file and put the contents in a directory on your computer.
 
 #. Open your favorite text editor, copy and paste the following code block into
    a new file and change the three lines in the top to be valid for your server.
@@ -70,17 +68,6 @@ Python API has to be set up. Follow the 5 simple steps below to get started:
 #. If the output in the terminal contains the names of all your projects, you
    have successfully set up your API and can start writing more advanced
    Python scripts! Happy coding!
-
-.. note::
-
-  If you see the error message ``ImportError: No module named ftrack``, ensure
-  that you have placed your script in the same directory as the API. The
-  directory should contain a file called ``ftrack.py``
-
-.. tip::
-
-  You can set the environment variable ``PYTHONPATH`` to point to a directory 
-  containing the python API instead of placing the script in the same directory.
 
 If you need any help, let us know by sending an email to support@ftrack.com.
 

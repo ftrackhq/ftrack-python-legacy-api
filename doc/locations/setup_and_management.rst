@@ -140,7 +140,7 @@ The ftrack server has a built in resolver service. The resolver is used to
 generate the full path of a component for a specified location. The built in
 resolver is only be able to resolve components for any of the built in
 locations. For other locations a custom 
-:doc:`Resolver plugin </developing/legacy/locations/example/resolver_plugin>`
+:doc:`Resolver plugin </locations/example/resolver_plugin>`
 must be setup.
 
 It is common that only a part of the filepath is stored in ftrack and the

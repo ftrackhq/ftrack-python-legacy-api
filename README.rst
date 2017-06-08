@@ -2,7 +2,12 @@
 ftrack-python-legacy-api
 ###############################
 
-The ftrack legacy python api.
+The ftrack legacy python api provided as reference, please use the
+`ftrack-python-api <http://rtd.ftrack.com/docs/ftrack-python-api/en/stable/>`_
+when developing new tools and consider migrating existing tools.
+
+Please see the migration guide for `more information <http://ftrack-python-api.rtd.ftrack.com/en/stable/release/migrating_from_old_api.html>`_.
+
 
 *************
 Documentation
@@ -27,4 +32,3 @@ Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
-

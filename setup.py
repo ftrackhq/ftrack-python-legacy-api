@@ -50,7 +50,8 @@ setup(
         'six >= 1.5.2'
     ],
     tests_require=[
-        'nose >= 1.3'
+        'nose >= 1.3',
+        'boto >= 2.4'
     ],
     test_suite='nose.collector',
     zip_safe=False,
