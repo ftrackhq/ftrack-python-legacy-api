@@ -7,7 +7,7 @@
 Release Notes
 *************
 
-.. release:: 3.2.6
+.. release:: 3.6.0
 
     .. change:: new
         :tags: Legacy API
