@@ -14,10 +14,10 @@ README_PATH = os.path.join(ROOT_PATH, 'README.rst')
 
 # Read version from source.
 with open(os.path.join(
-    SOURCE_PATH, 'ftrack', '_version.py')
+    SOURCE_PATH, 'FTrackCore', 'api', 'version_data.py')
 ) as _version_file:
     VERSION = re.match(
-        r'.*__version__ = \'(.*?)\'', _version_file.read(), re.DOTALL
+        r'.*ftrackVersion = \'(.*?)\'', _version_file.read(), re.DOTALL
     ).group(1)
 
 
@@ -53,6 +53,7 @@ setup(
         'nose >= 1.3',
         'boto >= 2.4'
     ],
+
     test_suite='nose.collector',
     zip_safe=False,
 )

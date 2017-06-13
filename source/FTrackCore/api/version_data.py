@@ -1,5 +1,1 @@
-from ftrack._version import (
-    __version__
-)
-
-ftrackVersion = __version__
+ftrackVersion = '3.6.0'
