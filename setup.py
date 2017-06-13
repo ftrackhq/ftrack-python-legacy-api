@@ -55,5 +55,4 @@ setup(
     ],
     test_suite='nose.collector',
     zip_safe=False,
-    py_modules=['ftrack', 'FTrackCore']
 )
