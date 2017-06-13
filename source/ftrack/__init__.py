@@ -16,12 +16,5 @@ if 'FTRACK_PROXY' in os.environ and os.environ.get('FTRACK_PROXY'):
             variable, os.environ.get('FTRACK_PROXY')
         )
 
-# Add ftrack core egg to path.
-sys.path.append(
-    os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), 'FTrackCore.egg'
-    )
-)
-
-# Import core ftrack functionality from egg into top level namespace.
+# Import core ftrack functionality into top level namespace.
 from FTrackCore import *
