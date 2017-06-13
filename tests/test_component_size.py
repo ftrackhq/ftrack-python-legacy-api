@@ -12,7 +12,10 @@ class TestComponentSize(object):
 
     def testCreateFileWithoutSpecifyingSize(self):
         '''Create file component and let ftrack calculate the size.'''
-        path = os.path.abspath('./data/bigfile.mov')
+        path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), 'data/bigfile.mov')
+        )
+
         fileComponent = ftrack.createComponent(name='video', path=path)
 
         assert_equal(
