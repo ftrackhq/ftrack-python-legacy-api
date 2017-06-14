@@ -31,9 +31,12 @@ def addVersion(shot,thumb,name,_type,user,comment=""):
     
     #Export
     asset.publish()
+
+    thumbnailpath = os.path.join(
+        os.path.dirname(__file__), 'data', thumb
+    )
     
-    
-    thumbnailpath = os.path.abspath("./data/" + thumb)
+
     thumb = version.createThumbnail(thumbnailpath)
     
     

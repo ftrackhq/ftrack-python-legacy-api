@@ -1,6 +1,6 @@
 # :coding: utf-8
 # :copyright: Copyright (c) 2013 ftrack
-
+import os
 from uuid import uuid1 as uuid
 
 import ftrack
@@ -62,7 +62,12 @@ class test_Types:
         def testNotes(entity):
             noteText = str(uuid())
             note = entity.createNote(noteText)
-            attachment = note.createAttachment("./data/attachment.txt")
+
+            path = os.path.abspath(
+                os.path.join(os.path.dirname(__file__), 'data/attachment.txt')
+            )
+
+            attachment = note.createAttachment(path)
 
             ok_(note.getText() == noteText, "Note is the same")
             

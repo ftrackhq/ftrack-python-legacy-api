@@ -259,7 +259,10 @@ class test_Types:
         import os
         user = ftrack.User('jenkins')
 
-        thumbnailpath = os.path.abspath("./data/thumbnail.jpg")
+        thumbnailpath = os.path.join(
+            os.path.dirname(__file__), 'data/thumbnail.jpg'
+        )
+
         thumb = user.createThumbnail(thumbnailpath)
 
 

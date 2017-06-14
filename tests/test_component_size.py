@@ -26,7 +26,11 @@ class TestComponentSize(object):
 
     def testCreateSequenceWithoutSpecifyingSize(self):
         '''Create sequence component and let ftrack calculate the size.'''
-        path = os.path.abspath('./data/sequence')
+
+        path = os.path.join(
+            os.path.dirname(__file__), 'data/sequence'
+        )
+
         sequenceComponent = ftrack.createComponent(
             name='imagesequence',
             path='{path}/file.%03d.jpg [1-5]'.format(path=path),
@@ -49,7 +53,10 @@ class TestComponentSize(object):
 
     def testCreateFileSpecifyingSize(self):
         '''Create file component and specify a size.'''
-        path = os.path.abspath('./data/bigfile.mov')
+
+        path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), 'data/bigfile.mov')
+        )
         fileComponent = ftrack.createComponent(
             name='video',
             path=path,
@@ -65,7 +72,10 @@ class TestComponentSize(object):
 
     def testCreateSequenceSpecifyingSize(self):
         '''Create sequence component and specify a size.'''
-        path = os.path.abspath('./data/sequence')
+
+        path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), 'data/sequence')
+        )
         sequenceComponent = ftrack.createComponent(
             name='imagesequence',
             path='{path}/file.%03d.jpg [1-5]'.format(path=path),
@@ -167,7 +177,10 @@ class TestComponentSize(object):
 
     def testCreateFileSpecifyingBigSize(self):
         '''Create file component and specify a size over the 32-bit limit.'''
-        path = os.path.abspath('./data/bigfile.mov')
+
+        path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), 'data/bigfile.mov')
+        )
         fileComponent = ftrack.createComponent(
             name='video',
             path=path,

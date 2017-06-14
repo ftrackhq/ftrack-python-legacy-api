@@ -45,7 +45,10 @@ class test_Types:
         
         
         #Add thumbnail and verify by donwloading it from server
-        thumbnailpath = os.path.abspath("./data/thumbnail.jpg")
+        thumbnailpath = os.path.join(
+            os.path.dirname(__file__), 'data/thumbnail.jpg'
+        )
+
         thumb = version.createThumbnail(thumbnailpath)
         version.setThumbnail(thumb)
         
@@ -288,7 +291,10 @@ class test_Types:
         #Export
         asset.publish()
                 
-        thumbnailpath = os.path.abspath("./data/thumbnail.jpg")
+        thumbnailpath = os.path.join(
+            os.path.dirname(__file__), 'data/thumbnail.jpg'
+        )
+
         thumb = version.createThumbnail(thumbnailpath)
         
     def test_11_asset_with_taskid(self):

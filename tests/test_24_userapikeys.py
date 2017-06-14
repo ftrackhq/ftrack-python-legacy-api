@@ -1,6 +1,7 @@
 # :coding: utf-8
 # :copyright: Copyright (c) 2013 ftrack
 
+import os
 import urlparse
 import urllib2
 import urllib
@@ -25,7 +26,10 @@ class TestUserApiKeys(object):
         '''Try to download a thumbnail using api keys without error.'''
         user = ftrack.getUser('jenkins')
         myShow = ftrack.getShowFromPath("test")
-        myShow.createThumbnail('./data/thumbnail.jpg')
+
+        myShow.createThumbnail(
+            os.path.join(os.path.dirname(__file__), 'data/thumbnail.jpg')
+        )
         url = myShow.getThumbnail()
 
         imgRequest = urllib2.Request(url)
