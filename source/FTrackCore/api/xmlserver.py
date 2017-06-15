@@ -40,7 +40,27 @@ def getOS():
     return platform
 
 
-if 'FTRACK_PROXY' in os.environ and os.environ['FTRACK_PROXY'] != "": 
+_proxy_variables = (
+    'FTRACK_PROXY',
+    'https_proxy',
+    'http_proxy'
+
+)
+
+http_proxy_url = None
+if set(_proxy_variables).intersection(set([k for k,v in os.environ.items() if v])):
+    # Check if there are proxy settings available, we check the legacy
+    # environment variable FTRACK_PROXY first followed by https_proxy and
+    # end with http_proxy.
+
+
+    for proxy_variable in _proxy_variables:
+        http_proxy_url = os.environ.get(
+            proxy_variable, None
+        )
+
+        if http_proxy_url:
+            break
 
     class addinfourl(urllib2.addinfourl):
         """
@@ -134,8 +154,8 @@ class XMLServer:
         self.tempId = 0
       
         p = None
-        if 'FTRACK_PROXY' in os.environ and os.environ['FTRACK_PROXY'] != "": 
-            p = HTTPProxyTransport({ 'http': os.environ['FTRACK_PROXY'], 'https': os.environ['FTRACK_PROXY'], })
+        if http_proxy_url:
+            p = HTTPProxyTransport({ 'http': http_proxy_url, 'https': http_proxy_url, })
             if url.startswith('https'):
                 p.https = True
         else:

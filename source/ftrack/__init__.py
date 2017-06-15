@@ -16,19 +16,6 @@ _proxy_variables = (
     'http_proxy'
 )
 
-if 'FTRACK_PROXY' in os.environ and os.environ.get('FTRACK_PROXY'):
-    for variable in _proxy_variables:
-        os.environ.setdefault(
-            variable, os.environ.get('FTRACK_PROXY')
-        )
-
-elif set(_proxy_variables).intersection(os.environ):
-    # If http_proxy and / or https_proxy environment variables are set
-    # update FTRACK_PROXY with the value. If both exist https_proxy win's.
-    for variable in [variable for variable in _proxy_variables if os.environ.get(variable)]:
-        os.environ.setdefault(
-            'FTRACK_PROXY', os.environ.get(variable)
-        )
 
 # Import core ftrack functionality into top level namespace.
 from FTrackCore import *
