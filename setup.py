@@ -53,6 +53,9 @@ setup(
         'nose >= 1.3',
         'boto >= 2.4'
     ],
+    py_modules=[
+        'ftrack'
+    ],
 
     test_suite='nose.collector',
     zip_safe=False,
