@@ -1,1 +1,1 @@
-ftrackVersion = '3.6.0'
+ftrackVersion = '3.6.1'
