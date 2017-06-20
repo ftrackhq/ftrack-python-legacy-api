@@ -46,7 +46,7 @@ setup(
         'pyparsing >= 2.0.1, < 3',
         'clique >= 1.2.0, < 2',
         'requests >= 2.2.0, < 3',
-        'websocket-client >= 0.40.0, < 1',
+        'websocket-client >= 0.40.0, < 1, !=0.42.0, !=0.42.1',
         'six >= 1.5.2'
     ],
     tests_require=[
