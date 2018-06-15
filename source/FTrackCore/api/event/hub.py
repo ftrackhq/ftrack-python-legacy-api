@@ -730,7 +730,7 @@ class EventHub(object):
         try:
             response = requests.get(
                 socketIoUrl,
-                timeout=10,
+                timeout=10
             )
         except requests.exceptions.Timeout as error:
             raise EventHubConnectionError(
