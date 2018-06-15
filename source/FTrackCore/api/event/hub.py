@@ -731,7 +731,7 @@ class EventHub(object):
             response = requests.get(
                 socketIoUrl,
                 timeout=10,
-                verify=False  # Allow self-signed SSL.
+                verify=True  # Might raise warning with self-signed SSL.
             )
         except requests.exceptions.Timeout as error:
             raise EventHubConnectionError(
