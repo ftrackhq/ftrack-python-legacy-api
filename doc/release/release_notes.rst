@@ -7,6 +7,14 @@
 Release Notes
 *************
 
+.. release:: Upcoming
+
+    .. change:: fix
+        :tags: Legacy API
+
+        Enforce check for SSL verification in hub connection.
+
+
 .. release:: 3.6.0
 
     .. change:: new
