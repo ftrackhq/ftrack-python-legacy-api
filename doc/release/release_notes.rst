@@ -7,7 +7,7 @@
 Release Notes
 *************
 
-.. release:: 3.6.2
+.. release:: 3.6.3
     :date: 2018-06-20
 
     .. change:: fix
