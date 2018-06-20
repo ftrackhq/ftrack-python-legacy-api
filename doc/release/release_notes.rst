@@ -7,7 +7,8 @@
 Release Notes
 *************
 
-.. release:: Upcoming
+.. release:: 3.6.2
+    :date: 2018-06-20
 
     .. change:: fix
         :tags: Legacy API
