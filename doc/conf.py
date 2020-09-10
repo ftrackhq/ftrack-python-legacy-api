@@ -38,15 +38,28 @@ project = u'ftrack-python-legacy-api'
 copyright = u'2017, ftrack'
 
 # Version
-with open(
-    os.path.join(
+p_version = os.path.realpath(os.path.join(
         os.path.dirname(__file__), '..', 'source',
         'ftrack', '_version.py'
-    )
-) as _version_file:
-    _version = re.match(
-        r'.*__version__ = \'(.*?)\'', _version_file.read(), re.DOTALL
-    ).group(1)
+    ))
+if os.path.exists(p_version):
+    with open(
+            os.path.join(p_version)
+    ) as _version_file:
+        _version = re.match(
+            r'.*__version__ = \'(.*?)\'', _version_file.read(), re.DOTALL
+        ).group(1)
+else:
+    p_version = os.path.realpath(os.path.join(
+        os.path.dirname(__file__), '..', 'source',
+        'FTrackCore', 'api', 'version_data.py'
+    ))
+    with open(
+        os.path.join(p_version)
+    ) as _version_file:
+        _version = re.match(
+            r'.*ftrackVersion = \'(.*?)\'', _version_file.read(), re.DOTALL
+        ).group(1)
 
 version = _version
 release = _version
@@ -114,3 +127,11 @@ todo_include_todos = True
 
 def setup(app):
     app.connect('autodoc-skip-member', autodoc_skip)
+
+# -- Templates ----------------------------------------------------------------
+templates_path = ['_templates']
+
+rst_prolog = """
+.. raw:: html
+   :file: doc/deprecated.html
+"""

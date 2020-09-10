@@ -2,6 +2,8 @@
 ftrack-python-legacy-api
 ###############################
 
+.. deprecated:: 2.0.0
+
 The ftrack legacy python api provided as reference, please use the
 `ftrack-python-api <http://rtd.ftrack.com/docs/ftrack-python-api/en/stable/>`_
 when developing new tools and consider migrating existing tools.
