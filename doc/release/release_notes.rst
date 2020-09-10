@@ -8,7 +8,7 @@ Release Notes
 *************
 
 .. release::
-    :date: 2020-09-10
+    :date: 
 
     .. change:: fix
         :tags: Legacy API

@@ -38,28 +38,15 @@ project = u'ftrack-python-legacy-api'
 copyright = u'2017, ftrack'
 
 # Version
-p_version = os.path.realpath(os.path.join(
-        os.path.dirname(__file__), '..', 'source',
-        'ftrack', '_version.py'
-    ))
-if os.path.exists(p_version):
-    with open(
-            os.path.join(p_version)
-    ) as _version_file:
-        _version = re.match(
-            r'.*__version__ = \'(.*?)\'', _version_file.read(), re.DOTALL
-        ).group(1)
-else:
-    p_version = os.path.realpath(os.path.join(
+with open(
+    os.path.join(os.path.join(
         os.path.dirname(__file__), '..', 'source',
         'FTrackCore', 'api', 'version_data.py'
     ))
-    with open(
-        os.path.join(p_version)
-    ) as _version_file:
-        _version = re.match(
-            r'.*ftrackVersion = \'(.*?)\'', _version_file.read(), re.DOTALL
-        ).group(1)
+) as _version_file:
+    _version = re.match(
+        r'.*ftrackVersion = \'(.*?)\'', _version_file.read(), re.DOTALL
+    ).group(1)
 
 version = _version
 release = _version
@@ -128,10 +115,11 @@ todo_include_todos = True
 def setup(app):
     app.connect('autodoc-skip-member', autodoc_skip)
 
-# -- Templates ----------------------------------------------------------------
-templates_path = ['_templates']
+
+# -- Deprecation warning ------------------------------------------------------
 
 rst_prolog = """
-.. raw:: html
-   :file: doc/deprecated.html
+.. warning::
+   Legacy python api are soon to be deprecated and should avoid to use them in production.
+   Please use the `new api <https://bitbucket.org/ftrack/ftrack-python-api/src/master/>`_ available.
 """

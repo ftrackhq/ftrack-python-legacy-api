@@ -2,7 +2,9 @@
 ftrack-python-legacy-api
 ###############################
 
-.. deprecated:: 2.0.0
+.. warning::
+   Legacy python api are soon to be deprecated and should avoid to use them in production.
+   Please use the `new api <https://bitbucket.org/ftrack/ftrack-python-api/src/master/>`_ available.
 
 The ftrack legacy python api provided as reference, please use the
 `ftrack-python-api <http://rtd.ftrack.com/docs/ftrack-python-api/en/stable/>`_
