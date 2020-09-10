@@ -7,6 +7,14 @@
 Release Notes
 *************
 
+.. release::
+    :date: 
+
+    .. change:: fix
+        :tags: Legacy API
+
+        Added deprecation warning.
+
 .. release:: 3.6.3
     :date: 2018-06-20
 
